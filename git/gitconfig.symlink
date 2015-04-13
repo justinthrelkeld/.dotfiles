@@ -22,7 +22,7 @@
         ui = true
 [core]
 	excludesfile = /Users/justin/.gitignore
-        editor = vim
+        editor = subl -w
 [apply]
         whitespace = nowarn
 [mergetool]
