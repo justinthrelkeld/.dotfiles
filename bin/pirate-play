@@ -1,0 +1,2 @@
+# play pirate tv through the power of pirate-get and peerflix :)
+pirate-get $1 -C "peerflix \"%s\" --vlc"

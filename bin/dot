@@ -6,11 +6,14 @@
 # to make sure you're on the latest and greatest.
 export ZSH=$HOME/.dotfiles
 
-# Set OS X defaults
-$ZSH/osx/set-defaults.sh
+# Agree To Xcode
+sudo xcrun cc
 
 # Upgrade homebrew
 brew update
 
 # Install homebrew packages
 $ZSH/homebrew/install.sh 2>&1
+
+# Set OS X defaults
+$ZSH/osx/set-defaults_el-capitan.sh
