@@ -1,45 +1,38 @@
-'global':
-  'editor':
-    'showIndentGuide': true
-    'fontFamily': 'Source Code Pro'
-    'showInvisibles': true
-    'fontSize': 13
-    'invisibles': {}
-  'core':
-    'ignoredNames': [
-      '.bundle'
-      '.git'
-      'log'
-      'repositories'
-      'tmp'
-      'vendor'
+"*":
+  core:
+    themes: [
+      "dark-flat-ui"
+      "afterglow-like"
     ]
-    'hideGitIgnoredFiles': true
-    'disabledPackages': [
-      'background-tips'
-      'exception-reporting'
-      'metrics'
+  "dark-flat-ui":
+    accentColor: "blue"
+  editor:
+    fontFamily: "Input Mono"
+    fontSize: 12
+    invisibles: {}
+    showIndentGuide: true
+    showInvisibles: true
+    softWrap: true
+    softWrapAtPreferredLineLength: true
+  emmet: {}
+  "exception-reporting":
+    userId: "f9b1e4f0-43d1-88ca-1574-157a9c53e392"
+  "file-icons": {}
+  "isotope-ui":
+    minimalMode: true
+  minimap:
+    plugins:
+      cursorline: true
+      cursorlineDecorationsZIndex: 0
+  "omni-ruler":
+    columns: [
+      "80"
+      "120"
     ]
-    'themes': [
-      'quantum-ui'
-      'muukii'
-    ]
-  'spell-check':
-    'grammars': [
-      'text.plain'
-      'source.gfm'
-      'text.git-commit'
-    ]
-  'welcome':
-    'showOnStartup': false
-  'release-notes':
-    'viewedVersion': '0.89.0'
-  'wakatime':
-    'apikey': ''
-    'ignore': [
-      '^/var/'
-      '^/tmp/'
-      '^/private/'
-    ]
-'.ini.source':
-  'editor': {}
+  "one-dark-ui": {}
+  wakatime:
+    apikey: "Saved in your ~/.wakatime.cfg file"
+  "wakatime-hidden":
+    lastInit: 1470759336
+  welcome:
+    showOnStartup: false
