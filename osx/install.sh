@@ -1,5 +1,5 @@
 brew install \ 
-dockutil \ 
+dockutil
 
 # install cask for mac applications
 brew install caskroom/cask/brew-cask
