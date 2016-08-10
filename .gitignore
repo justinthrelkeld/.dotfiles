@@ -5,3 +5,6 @@ atom.symlink/storage
 atom.symlink/themes
 
 atom.symlink/compile-cache
+atom.symlink/.apm
+atom.symlink/archive
+atom.symlink/blob-store
