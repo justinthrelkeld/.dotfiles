@@ -67,11 +67,44 @@ rb_prompt() {
   fi
 }
 
+node_version() {
+  # if [ command -v nvm >/dev/null 2>&1 ] && [ test -e .nvmrc ]
+  if test -e .nvmrc && command -v nvm >/dev/null 2>&1
+  then
+    echo "$(nvm version | awk '{print $1}')"
+  fi
+}
+
+nvm_local_version() {
+  if test -e .nvmrc
+  then
+    echo "$(cat .nvmrc)"
+  fi
+}
+
+node_version_match() {
+  if [[ "$(node_version)" == "$(nvm_local_version)" ]]
+  then
+    echo ""
+  else
+    echo "%{$fg_bold[red]%} (needs $(nvm_local_version))"
+  fi
+}
+
+node_prompt() {
+  if ! [[ -z "$(node_version)" ]]
+  then
+    echo "%{$fg_bold[yellow]%}node $(node_version)$(node_version_match)%{$reset_color%} "
+  else
+    echo ""
+  fi
+}
+
 directory_name() {
   echo "%{$fg_bold[cyan]%}%1/%\/%{$reset_color%}"
 }
 
-export PROMPT=$'\n$(rb_prompt)in $(directory_name) $(git_dirty)$(need_push)\n➜ '
+export PROMPT=$'\n$(rb_prompt)$(node_prompt)in $(directory_name) $(git_dirty)$(need_push)\n➜ '
 set_prompt () {
   export RPROMPT="%{$fg_bold[cyan]%}%{$reset_color%}"
 }
